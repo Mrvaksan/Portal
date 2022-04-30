@@ -22,7 +22,7 @@ public class Main {
 
         } catch (FileNotFoundException e) {
             //Dosya bulunamadýðýnda hata mesajý yazdýrýp programdan çýkýyoruz.
-            System.out.println("Dosya bulunamadý.");
+            System.out.println("Dosya Bulunamadý.");
             return;
         }
 
@@ -195,7 +195,7 @@ public class Main {
                                     boolean isStudent = false;
                                     int studentIndex = 0;
 
-                                    System.out.print("Öðrencinin Numarasýný giriniz: ");
+                                    System.out.print("Öðrencinin Numarasýný Giriniz: ");
                                     s_id = scan.nextInt();
 
                                     for (int i = 0; i < studentCount; i++) {
@@ -219,13 +219,13 @@ public class Main {
                                             switch (option) {
                                                 case 1:
                                                     //Ýlgili dersin notunu deðiþtir.
-                                                    System.out.print("Öðrencini notunu giriniz: ");
+                                                    System.out.print("Öðrencinin Notunu Giriniz: ");
                                                     int grade = scan.nextInt();
                                                     teachersList[userIndex].changeStudentGrade(studentsList[studentIndex], grade);
                                                     break;
                                                 case 2:
                                                     //Devamsýzlýk düzenle
-                                                    System.out.print("Öðrencinin devamsýzlýðýný güncelleyiniz: ");
+                                                    System.out.print("Öðrencinin Devamsýzlýðýný Güncelleyiniz: ");
                                                     int nonattendance = scan.nextInt();
                                                     teachersList[userIndex].changeStudentNonAttendance(studentsList[studentIndex], nonattendance);
                                                     break;
