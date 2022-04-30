@@ -14,12 +14,6 @@ public class Teacher {
         this.t_branch = t_branch;
     }
 
-    void chooseStudent(Student studentList) {
-        System.out.println("Öğrencinin Numarası: ");
-        int s_id;
-        s_id = scan.nextInt();
-    }
-
     public void changeStudentGrade(Student student, int grade) {
         student.setGrade(grade, t_branch);
     }
