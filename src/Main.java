@@ -137,6 +137,7 @@ public class Main {
                             System.out.println("1. Karne Görüntüle");
                             System.out.println("2. Çýkýþ");
 
+                            System.out.print("Seçim Yapýnýz: ");
                             option = scan.nextInt();
 
                             switch (option) {
@@ -183,6 +184,7 @@ public class Main {
                             System.out.println("1. Öðrenci Seç");
                             System.out.println("2. Çýkýþ");
 
+                            System.out.print("Seçim Yapýnýz: ");
                             option = scan.nextInt();
 
                             switch (option) {
@@ -214,6 +216,7 @@ public class Main {
                                             System.out.println("2. Devamsýzlýk Düzenle");
                                             System.out.println("3. Geri");
 
+                                            System.out.print("Seçim Yapýnýz: ");
                                             option = scan.nextInt();
 
                                             switch (option) {
@@ -245,6 +248,8 @@ public class Main {
                                     break;
                             }
                         }
+                    }else {
+                        System.out.println("Kayýt Bulunamadý!");
                     }
                     break;
                 case 3:
