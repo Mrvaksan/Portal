@@ -39,12 +39,15 @@ public class Student {
             }
         }
         System.out.println("____________________________________________________________");
+        nonAttendances = 0;
         for (int i = 0; i < nonattendances.length; i++) {
             nonAttendances += nonattendances[i];
         }
         System.out.printf("%-30s%30d\n", "DEVAMSIZLIK", nonAttendances);
         System.out.println("____________________________________________________________");
 
+        akts = 0;
+        weightedTotals = 0;
         for (int i = 0; i < courseList.length; i++) {
             if (courseList[i] != null) {
                 akts += courseList[i].c_weight;

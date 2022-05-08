@@ -1,0 +1,528 @@
+diff --git a/.gitignore b/.gitignore
+index ef20633..aa724b7 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1,2 +1,15 @@
+-out/
+-*.txt
++*.iml
++.gradle
++/local.properties
++/.idea/caches
++/.idea/libraries
++/.idea/modules.xml
++/.idea/workspace.xml
++/.idea/navEditor.xml
++/.idea/assetWizardSettings.xml
++.DS_Store
++/build
++/captures
++.externalNativeBuild
++.cxx
++local.properties
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+index eaf91e2..26d3352 100644
+--- a/.idea/.gitignore
++++ b/.idea/.gitignore
+@@ -1,3 +1,3 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
++# Default ignored files
++/shelf/
++/workspace.xml
+diff --git a/.idea/.name b/.idea/.name
+index 002da1d..e7ddca5 100644
+--- a/.idea/.name
++++ b/.idea/.name
+@@ -1 +1 @@
+-Main.java
+\ No newline at end of file
++School Portal
+\ No newline at end of file
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+deleted file mode 100644
+index dc78510..0000000
+--- a/.idea/encodings.xml
++++ /dev/null
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding">
+-    <file url="file://$PROJECT_DIR$/src/Main.java" charset="windows-1254" />
+-    <file url="PROJECT" charset="windows-1254" />
+-  </component>
+-</project>
+\ No newline at end of file
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+index 9b35c7d..fd5cd18 100644
+--- a/.idea/misc.xml
++++ b/.idea/misc.xml
+@@ -1,6 +1,23 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="DesignSurface">
++    <option name="filePathToZoomLevelMap">
++      <map>
++        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3541666666666667" />
++        <entry key="app/src/main/res/layout/content_main.xml" value="0.3541666666666667" />
++        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25" />
++        <entry key="app/src/main/res/layout/fragment_fourth.xml" value="0.3541666666666667" />
++        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.19739583333333333" />
++        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.3541666666666667" />
++        <entry key="app/src/main/res/layout/fragment_third.xml" value="0.3541666666666667" />
++        <entry key="app/src/main/res/layout/fragment_transcript.xml" value="0.3541666666666667" />
++      </map>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="Android" />
++  </component>
+ </project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+index 854bcec..4568019 100644
+--- a/.idea/modules.xml
++++ b/.idea/modules.xml
+@@ -1,8 +1,9 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/Portal.iml" filepath="$PROJECT_DIR$/Portal.iml" />
+-    </modules>
+-  </component>
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/School_Portal.iml" filepath="$PROJECT_DIR$/.idea/modules/School_Portal.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/School_Portal.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/School_Portal.app.iml" />
++    </modules>
++  </component>
+ </project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+index 9661ac7..0000000
+--- a/.idea/vcs.xml
++++ /dev/null
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+diff --git a/Portal.iml b/Portal.iml
+deleted file mode 100644
+index 9465dd8..0000000
+--- a/Portal.iml
++++ /dev/null
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index 739503c..0000000
+--- a/README.md
++++ /dev/null
+@@ -1 +0,0 @@
+-# Portal
+diff --git a/src/Courses.java b/src/Courses.java
+deleted file mode 100644
+index 62273de..0000000
+--- a/src/Courses.java
++++ /dev/null
+@@ -1,11 +0,0 @@
+-public class Courses {
+-    int c_index;
+-    int c_weight;
+-    String c_name;
+-
+-    public Courses(int c_index,int c_weight,String c_name) {
+-        this.c_index=c_index;
+-        this.c_weight=c_weight;
+-        this.c_name=c_name;
+-    }
+-}
+diff --git a/src/Main.java b/src/Main.java
+deleted file mode 100644
+index 3211c0a..0000000
+--- a/src/Main.java
++++ /dev/null
+@@ -1,261 +0,0 @@
+-import java.io.File;
+-import java.io.FileNotFoundException;
+-import java.util.Scanner;
+-
+-public class Main {
+-    public static void main(String[] args) {
+-        Scanner scan = new Scanner(System.in);
+-        Teacher[] teachersList = new Teacher[5];
+-        Student[] studentsList = new Student[5];
+-        Courses[] courseList = new Courses[5];
+-        int studentCount = 0;
+-        int teacherCount = 0;
+-        int courseCount = 0;
+-
+-        Scanner teachersFile;
+-        Scanner studentsFile;
+-        Scanner coursesFile;
+-        try {
+-            teachersFile = new Scanner(new File("teachers.txt"));
+-            studentsFile = new Scanner(new File("students.txt"));
+-            coursesFile = new Scanner(new File("courses.txt"));
+-
+-        } catch (FileNotFoundException e) {
+-            //Dosya bulunamadýðýnda hata mesajý yazdýrýp programdan çýkýyoruz.
+-            System.out.println("Dosya Bulunamadý.");
+-            return;
+-        }
+-
+-        teachersFile.useDelimiter(",|\\n|\\r\\n");
+-        studentsFile.useDelimiter(",|\\n|\\r\\n");
+-        coursesFile.useDelimiter(",|\\n|\\r\\n");
+-
+-        while (teachersFile.hasNext()) {
+-
+-            String t_name;
+-            int t_id;
+-            String t_password;
+-            int t_branch;
+-
+-            t_name = teachersFile.next();
+-            t_id = teachersFile.nextInt();
+-            t_password = teachersFile.next();
+-            t_branch = teachersFile.nextInt();
+-
+-            teachersList[teacherCount] = new Teacher(t_name, t_id, t_password, t_branch);
+-            teacherCount++;
+-
+-            if (teacherCount == 5) {
+-                break;
+-            }
+-        }
+-        while (coursesFile.hasNext()) {
+-
+-            int c_index;
+-            int c_weight;
+-            String c_name;
+-
+-            c_index = coursesFile.nextInt();
+-            c_weight = coursesFile.nextInt();
+-            c_name = coursesFile.next();
+-
+-            courseList[courseCount] = new Courses(c_index, c_weight, c_name);
+-            courseCount++;
+-
+-            if (courseCount == 5) {
+-                break;
+-            }
+-        }
+-        while (studentsFile.hasNext()) {
+-
+-            String s_name;
+-            String s_surname;
+-            int s_id;
+-            String s_password;
+-
+-            s_name = studentsFile.next();
+-            s_surname = studentsFile.next();
+-            s_id = studentsFile.nextInt();
+-            s_password = studentsFile.next();
+-
+-            studentsList[studentCount] = new Student(s_name, s_surname, s_id, s_password);
+-            studentsList[studentCount].courseList = courseList;
+-            studentCount++;
+-
+-            if (studentCount == 5) {
+-                break;
+-            }
+-        }
+-
+-        int option;
+-        int t_id;
+-        String t_password;
+-        int s_id;
+-        String s_password;
+-
+-        while (true) {
+-            boolean isAuthenticated = false;
+-            int userIndex = -1;
+-
+-            System.out.println("Öðrenci ve Öðretmen Bilgi Sistemi");
+-            System.out.println("1. Öðrenci Giriþi");
+-            System.out.println("2. Öðretmen Giriþi");
+-            System.out.println("3. Çýkýþ");
+-
+-            System.out.print("Seçim Yapýnýz: ");
+-            option = scan.nextInt();
+-
+-            switch (option) {
+-                case 1:
+-                    //Öðrenci kullanýcý adý ve þifre sorulacak.
+-                    //Öðrenci listesinden öðrencinin olup olmadýðýný sorgular.
+-                    //Öðrenci yoksa "Kayýt Bulunamadý" uyarýsý ver.
+-                    //Öðrenci varsa sisteme giriþ yap.
+-
+-                    System.out.print("Kullanýcý Adý: ");
+-                    s_id = scan.nextInt();
+-                    System.out.print("Þifre: ");
+-                    s_password = scan.next();
+-
+-                    //Þifre doðru mu diye kontrol edelim
+-                    for (int i = 0; i < studentCount; i++) {
+-
+-                        if (s_id == studentsList[i].s_id && s_password.equals(studentsList[i].s_password)) {
+-                            //Öðrenci bulundu
+-                            isAuthenticated = true;
+-                            userIndex = i;
+-                            break;
+-                        }
+-                    }
+-                    //Þifre doðru ise öðrenci portalý menüsü gelsin
+-                    if (isAuthenticated) {
+-                        boolean isTerminated = false;
+-
+-                        while (!isTerminated) {
+-                            //Öðreci bilgi sistemine giriþ yap.
+-                            System.out.println("Öðrenci Bilgi Sistemine Giriþ Yaptýnýz.");
+-                            System.out.println("1. Karne Görüntüle");
+-                            System.out.println("2. Çýkýþ");
+-
+-                            System.out.print("Seçim Yapýnýz: ");
+-                            option = scan.nextInt();
+-
+-                            switch (option) {
+-                                case 1:
+-                                    //Karne görüntüle
+-                                    studentsList[userIndex].showTranscript();
+-                                    break;
+-                                case 2:
+-                                    //Ana menüye dön
+-                                    isTerminated = true;
+-                                    break;
+-                            }
+-                        }
+-                    } else {
+-                        System.out.println("Kayýt Bulunamadý!");
+-                    }
+-                    break;
+-                case 2:
+-                    //Öðretmen kullanýcý adý ve þifre sorulacak.
+-                    //Öðretmen listesinden öðretmenin olup olmadýðý sorgulanacak.
+-                    //Öðretmen yoksa "Kayýt Bulunamadý" uyarýsý verecek.
+-                    //Öðretmen varsa sisteme giriþ yapýlacak.
+-
+-                    System.out.print("Kullanýcý Adý: ");
+-                    t_id = scan.nextInt();
+-                    System.out.print("Þifre: ");
+-                    t_password = scan.next();
+-
+-                    for (int i = 0; i < teacherCount; i++) {
+-                        if (t_id == teachersList[i].t_id && t_password.equals(teachersList[i].t_password)) {
+-
+-                            isAuthenticated = true;
+-                            userIndex = i;
+-                            break;
+-                        }
+-                    }
+-                    if (isAuthenticated) {
+-                        boolean isTerminated = false;
+-
+-                        while (!isTerminated) {
+-
+-                            //Öðretmen sistemine giriþ yap.
+-                            System.out.println("Öðretmen Sistemine Giriþ Yaptýnýz.");
+-                            System.out.println("1. Öðrenci Seç");
+-                            System.out.println("2. Çýkýþ");
+-
+-                            System.out.print("Seçim Yapýnýz: ");
+-                            option = scan.nextInt();
+-
+-                            switch (option) {
+-                                case 1:
+-                                    //Öðrenci id numarasý ile öðrenci seç
+-
+-                                    //Öðrencinin,notunu deðiþtir,devamsýzlýk düzenle,geri
+-
+-                                    boolean isTerminatedStudentMenu = false;
+-                                    boolean isStudent = false;
+-                                    int studentIndex = 0;
+-
+-                                    System.out.print("Öðrencinin Numarasýný Giriniz: ");
+-                                    s_id = scan.nextInt();
+-
+-                                    for (int i = 0; i < studentCount; i++) {
+-                                        if (s_id == studentsList[i].s_id) {
+-                                            isStudent = true;
+-                                            studentIndex = i;
+-                                            break;
+-                                        }
+-                                    }
+-                                    if (isStudent) {
+-
+-                                        while (!isTerminatedStudentMenu) {
+-
+-                                            System.out.println("Yapmak Ýstediðiniz Ýþlemi Seçiniz.");
+-                                            System.out.println("1. Notunu Deðiþtir");
+-                                            System.out.println("2. Devamsýzlýk Düzenle");
+-                                            System.out.println("3. Geri");
+-
+-                                            System.out.print("Seçim Yapýnýz: ");
+-                                            option = scan.nextInt();
+-
+-                                            switch (option) {
+-                                                case 1:
+-                                                    //Ýlgili dersin notunu deðiþtir.
+-                                                    System.out.print("Öðrencinin Notunu Giriniz: ");
+-                                                    int grade = scan.nextInt();
+-                                                    teachersList[userIndex].changeStudentGrade(studentsList[studentIndex], grade);
+-                                                    break;
+-                                                case 2:
+-                                                    //Devamsýzlýk düzenle
+-                                                    System.out.print("Öðrencinin Devamsýzlýðýný Güncelleyiniz: ");
+-                                                    int nonattendance = scan.nextInt();
+-                                                    teachersList[userIndex].changeStudentNonAttendance(studentsList[studentIndex], nonattendance);
+-                                                    break;
+-                                                case 3:
+-                                                    //Geri git,öðretmen bilgi sistemine geri dön.
+-                                                    isTerminatedStudentMenu = true;
+-                                                    break;
+-                                            }
+-                                        }
+-                                    } else {
+-                                        System.out.println("Kayýt Bulunamadý.");
+-                                    }
+-                                    break;
+-                                case 2:
+-                                    //Ana menüye dön
+-                                    isTerminated = true;
+-                                    break;
+-                            }
+-                        }
+-                    }else {
+-                        System.out.println("Kayýt Bulunamadý!");
+-                    }
+-                    break;
+-                case 3:
+-                    //Çýkýþ yap,programý sonlandýr.
+-                    return;
+-            }
+-        }
+-    }
+-}
+\ No newline at end of file
+diff --git a/src/Student.java b/src/Student.java
+deleted file mode 100644
+index 71925dd..0000000
+--- a/src/Student.java
++++ /dev/null
+@@ -1,57 +0,0 @@
+-public class Student {
+-    String s_name;
+-    String s_surname;
+-    int s_id;
+-    String s_password;
+-    int grades[] = new int[5];
+-    int nonattendances[] = new int[5];
+-    Courses[] courseList = new Courses[5];
+-    int nonAttendances;
+-    int akts;
+-    int weightedTotals;
+-    double gpa;
+-
+-    public Student(String s_name, String s_surname, int s_id, String s_password) {
+-        this.s_name = s_name;
+-        this.s_surname = s_surname;
+-        this.s_id = s_id;
+-        this.s_password = s_password;
+-    }
+-
+-    public void setGrade(int grade, int t_branch) {
+-        grades[t_branch] = grade;
+-    }
+-
+-    public void setNonAttendance(int nonattendance, int t_branch) {
+-        nonattendances[t_branch] = nonattendance;
+-    }
+-
+-    public void showTranscript() {
+-        System.out.printf("%-30s%30s\n", "Ä°SÄ°M:", s_name);
+-        System.out.printf("%-30s%30s\n", "SOYÄ°SÄ°M:", s_surname);
+-        System.out.printf("%-30s%30d\n", "OKUL NUMARASI:", s_id);
+-        System.out.println("___________________________NOTLAR___________________________");
+-        System.out.printf("%-20s%20s%20s\n", "DERS ADI", "AKTS", "ORTALAMA");
+-
+-        for (int i = 0; i < grades.length; i++) {
+-            if (courseList[i] != null) {
+-                System.out.printf("%-20s%20d%20d\n", courseList[i].c_name, courseList[i].c_weight, grades[i]);
+-            }
+-        }
+-        System.out.println("____________________________________________________________");
+-        for (int i = 0; i < nonattendances.length; i++) {
+-            nonAttendances += nonattendances[i];
+-        }
+-        System.out.printf("%-30s%30d\n", "DEVAMSIZLIK", nonAttendances);
+-        System.out.println("____________________________________________________________");
+-
+-        for (int i = 0; i < courseList.length; i++) {
+-            if (courseList[i] != null) {
+-                akts += courseList[i].c_weight;
+-                weightedTotals += courseList[i].c_weight * grades[i];
+-            }
+-        }
+-        gpa = weightedTotals / akts;
+-        System.out.printf("%-30s%30f\n", "GENEL ORTALAMA:", gpa);
+-    }
+-}
+diff --git a/src/Teacher.java b/src/Teacher.java
+deleted file mode 100644
+index 9f93500..0000000
+--- a/src/Teacher.java
++++ /dev/null
+@@ -1,24 +0,0 @@
+-import java.util.Scanner;
+-
+-public class Teacher {
+-    Scanner scan = new Scanner(System.in);
+-    String t_name;
+-    int t_id;
+-    String t_password;
+-    int t_branch;
+-
+-    public Teacher(String t_name, int t_id, String t_password, int t_branch) {
+-        this.t_name = t_name;
+-        this.t_id = t_id;
+-        this.t_password = t_password;
+-        this.t_branch = t_branch;
+-    }
+-
+-    public void changeStudentGrade(Student student, int grade) {
+-        student.setGrade(grade, t_branch);
+-    }
+-
+-    public void changeStudentNonAttendance(Student student, int nonattendance) {
+-        student.setNonAttendance(nonattendance, t_branch);
+-    }
+-}
