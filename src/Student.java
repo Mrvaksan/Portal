@@ -27,8 +27,8 @@ public class Student {
     }
 
     public void showTranscript() {
-        System.out.printf("%-30s%30s\n", "İSİM:", s_name);
-        System.out.printf("%-30s%30s\n", "SOYİSİM:", s_surname);
+        System.out.printf("%-30s%30s\n", "ISIM:", s_name);
+        System.out.printf("%-30s%30s\n", "SOYISIM:", s_surname);
         System.out.printf("%-30s%30d\n", "OKUL NUMARASI:", s_id);
         System.out.println("___________________________NOTLAR___________________________");
         System.out.printf("%-20s%20s%20s\n", "DERS ADI", "AKTS", "ORTALAMA");
