@@ -21,8 +21,8 @@ public class Main {
             coursesFile = new Scanner(new File("courses.txt"));
 
         } catch (FileNotFoundException e) {
-            //Dosya bulunamadýðýnda hata mesajý yazdýrýp programdan çýkýyoruz.
-            System.out.println("Dosya Bulunamadý.");
+            //Dosya bulunamadÄ±ÄŸÄ±nda hata mesajÄ± yazdÄ±rÄ±p programdan Ã§Ä±kÄ±yoruz.
+            System.out.println("Dosya BulunamadÄ±.");
             return;
         }
 
@@ -97,73 +97,73 @@ public class Main {
             boolean isAuthenticated = false;
             int userIndex = -1;
 
-            System.out.println("Öðrenci ve Öðretmen Bilgi Sistemi");
-            System.out.println("1. Öðrenci Giriþi");
-            System.out.println("2. Öðretmen Giriþi");
-            System.out.println("3. Çýkýþ");
+            System.out.println("Ã–ÄŸrenci ve Ã–ÄŸretmen Bilgi Sistemi");
+            System.out.println("1. Ã–ÄŸrenci GiriÅŸi");
+            System.out.println("2. Ã–ÄŸretmen GiriÅŸi");
+            System.out.println("3. Ã‡Ä±kÄ±ÅŸ");
 
-            System.out.print("Seçim Yapýnýz: ");
+            System.out.print("SeÃ§im YapÄ±nÄ±z: ");
             option = scan.nextInt();
 
             switch (option) {
                 case 1:
-                    //Öðrenci kullanýcý adý ve þifre sorulacak.
-                    //Öðrenci listesinden öðrencinin olup olmadýðýný sorgular.
-                    //Öðrenci yoksa "Kayýt Bulunamadý" uyarýsý ver.
-                    //Öðrenci varsa sisteme giriþ yap.
+                    //Ã–ÄŸrenci kullanÄ±cÄ± adÄ± ve ÅŸifre sorulacak.
+                    //Ã–ÄŸrenci listesinden Ã¶ÄŸrencinin olup olmadÄ±ÄŸÄ±nÄ± sorgular.
+                    //Ã–ÄŸrenci yoksa "KayÄ±t BulunamadÄ±" uyarÄ±sÄ± ver.
+                    //Ã–ÄŸrenci varsa sisteme giriÅŸ yap.
 
-                    System.out.print("Kullanýcý Adý: ");
+                    System.out.print("KullanÄ±cÄ± AdÄ±: ");
                     s_id = scan.nextInt();
-                    System.out.print("Þifre: ");
+                    System.out.print("Åžifre: ");
                     s_password = scan.next();
 
-                    //Þifre doðru mu diye kontrol edelim
+                    //Åžifre doÄŸru mu diye kontrol edelim
                     for (int i = 0; i < studentCount; i++) {
 
                         if (s_id == studentsList[i].s_id && s_password.equals(studentsList[i].s_password)) {
-                            //Öðrenci bulundu
+                            //Ã–ÄŸrenci bulundu
                             isAuthenticated = true;
                             userIndex = i;
                             break;
                         }
                     }
-                    //Þifre doðru ise öðrenci portalý menüsü gelsin
+                    //Åžifre doÄŸru ise Ã¶ÄŸrenci portalÄ± menÃ¼sÃ¼ gelsin
                     if (isAuthenticated) {
                         boolean isTerminated = false;
 
                         while (!isTerminated) {
-                            //Öðreci bilgi sistemine giriþ yap.
-                            System.out.println("Öðrenci Bilgi Sistemine Giriþ Yaptýnýz.");
-                            System.out.println("1. Karne Görüntüle");
-                            System.out.println("2. Çýkýþ");
+                            //Ã–ÄŸreci bilgi sistemine giriÅŸ yap.
+                            System.out.println("Ã–ÄŸrenci Bilgi Sistemine GiriÅŸ YaptÄ±nÄ±z.");
+                            System.out.println("1. Karne GÃ¶rÃ¼ntÃ¼le");
+                            System.out.println("2. Ã‡Ä±kÄ±ÅŸ");
 
-                            System.out.print("Seçim Yapýnýz: ");
+                            System.out.print("SeÃ§im YapÄ±nÄ±z: ");
                             option = scan.nextInt();
 
                             switch (option) {
                                 case 1:
-                                    //Karne görüntüle
+                                    //Karne gÃ¶rÃ¼ntÃ¼le
                                     studentsList[userIndex].showTranscript();
                                     break;
                                 case 2:
-                                    //Ana menüye dön
+                                    //Ana menÃ¼ye dÃ¶n
                                     isTerminated = true;
                                     break;
                             }
                         }
                     } else {
-                        System.out.println("Kayýt Bulunamadý!");
+                        System.out.println("KayÄ±t BulunamadÄ±!");
                     }
                     break;
                 case 2:
-                    //Öðretmen kullanýcý adý ve þifre sorulacak.
-                    //Öðretmen listesinden öðretmenin olup olmadýðý sorgulanacak.
-                    //Öðretmen yoksa "Kayýt Bulunamadý" uyarýsý verecek.
-                    //Öðretmen varsa sisteme giriþ yapýlacak.
+                    //Ã–ÄŸretmen kullanÄ±cÄ± adÄ± ve ÅŸifre sorulacak.
+                    //Ã–ÄŸretmen listesinden Ã¶ÄŸretmenin olup olmadÄ±ÄŸÄ± sorgulanacak.
+                    //Ã–ÄŸretmen yoksa "KayÄ±t BulunamadÄ±" uyarÄ±sÄ± verecek.
+                    //Ã–ÄŸretmen varsa sisteme giriÅŸ yapÄ±lacak.
 
-                    System.out.print("Kullanýcý Adý: ");
+                    System.out.print("KullanÄ±cÄ± AdÄ±: ");
                     t_id = scan.nextInt();
-                    System.out.print("Þifre: ");
+                    System.out.print("Åžifre: ");
                     t_password = scan.next();
 
                     for (int i = 0; i < teacherCount; i++) {
@@ -179,25 +179,25 @@ public class Main {
 
                         while (!isTerminated) {
 
-                            //Öðretmen sistemine giriþ yap.
-                            System.out.println("Öðretmen Sistemine Giriþ Yaptýnýz.");
-                            System.out.println("1. Öðrenci Seç");
-                            System.out.println("2. Çýkýþ");
+                            //Ã–ÄŸretmen sistemine giriÅŸ yap.
+                            System.out.println("Ã–ÄŸretmen Sistemine GiriÅŸ YaptÄ±nÄ±z.");
+                            System.out.println("1. Ã–ÄŸrenci SeÃ§");
+                            System.out.println("2. Ã‡Ä±kÄ±ÅŸ");
 
-                            System.out.print("Seçim Yapýnýz: ");
+                            System.out.print("SeÃ§im YapÄ±nÄ±z: ");
                             option = scan.nextInt();
 
                             switch (option) {
                                 case 1:
-                                    //Öðrenci id numarasý ile öðrenci seç
+                                    //Ã–ÄŸrenci id numarasÄ± ile Ã¶ÄŸrenci seÃ§
 
-                                    //Öðrencinin,notunu deðiþtir,devamsýzlýk düzenle,geri
+                                    //Ã–ÄŸrencinin,notunu deÄŸiÅŸtir,devamsÄ±zlÄ±k dÃ¼zenle,geri
 
                                     boolean isTerminatedStudentMenu = false;
                                     boolean isStudent = false;
                                     int studentIndex = 0;
 
-                                    System.out.print("Öðrencinin Numarasýný Giriniz: ");
+                                    System.out.print("Ã–ÄŸrencinin NumarasÄ±nÄ± Giriniz: ");
                                     s_id = scan.nextInt();
 
                                     for (int i = 0; i < studentCount; i++) {
@@ -211,49 +211,49 @@ public class Main {
 
                                         while (!isTerminatedStudentMenu) {
 
-                                            System.out.println("Yapmak Ýstediðiniz Ýþlemi Seçiniz.");
-                                            System.out.println("1. Notunu Deðiþtir");
-                                            System.out.println("2. Devamsýzlýk Düzenle");
+                                            System.out.println("Yapmak Ä°stediÄŸiniz Ä°ÅŸlemi SeÃ§iniz.");
+                                            System.out.println("1. Notunu DeÄŸiÅŸtir");
+                                            System.out.println("2. DevamsÄ±zlÄ±k DÃ¼zenle");
                                             System.out.println("3. Geri");
 
-                                            System.out.print("Seçim Yapýnýz: ");
+                                            System.out.print("SeÃ§im YapÄ±nÄ±z: ");
                                             option = scan.nextInt();
 
                                             switch (option) {
                                                 case 1:
-                                                    //Ýlgili dersin notunu deðiþtir.
-                                                    System.out.print("Öðrencinin Notunu Giriniz: ");
+                                                    //Ä°lgili dersin notunu deÄŸiÅŸtir.
+                                                    System.out.print("Ã–ÄŸrencinin Notunu Giriniz: ");
                                                     int grade = scan.nextInt();
                                                     teachersList[userIndex].changeStudentGrade(studentsList[studentIndex], grade);
                                                     break;
                                                 case 2:
-                                                    //Devamsýzlýk düzenle
-                                                    System.out.print("Öðrencinin Devamsýzlýðýný Güncelleyiniz: ");
+                                                    //DevamsÄ±zlÄ±k dÃ¼zenle
+                                                    System.out.print("Ã–ÄŸrencinin DevamsÄ±zlÄ±ÄŸÄ±nÄ± GÃ¼ncelleyiniz: ");
                                                     int nonattendance = scan.nextInt();
                                                     teachersList[userIndex].changeStudentNonAttendance(studentsList[studentIndex], nonattendance);
                                                     break;
                                                 case 3:
-                                                    //Geri git,öðretmen bilgi sistemine geri dön.
+                                                    //Geri git,Ã¶ÄŸretmen bilgi sistemine geri dÃ¶n.
                                                     isTerminatedStudentMenu = true;
                                                     break;
                                             }
                                         }
                                     } else {
-                                        System.out.println("Kayýt Bulunamadý.");
+                                        System.out.println("KayÄ±t BulunamadÄ±.");
                                     }
                                     break;
                                 case 2:
-                                    //Ana menüye dön
+                                    //Ana menÃ¼ye dÃ¶n
                                     isTerminated = true;
                                     break;
                             }
                         }
                     }else {
-                        System.out.println("Kayýt Bulunamadý!");
+                        System.out.println("KayÄ±t BulunamadÄ±!");
                     }
                     break;
                 case 3:
-                    //Çýkýþ yap,programý sonlandýr.
+                    //Ã‡Ä±kÄ±ÅŸ yap,programÄ± sonlandÄ±r.
                     return;
             }
         }
